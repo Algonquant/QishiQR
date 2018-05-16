@@ -1,7 +1,7 @@
 # QishiQR
 ## quantitative trading strategy research project within Qishi club
 
-# For code review with Qsemble
+# My contribution is selected for code review with Qsemble
 
 ## Backtesting/Vectorized folder contains major bactesting files needed. 
 ### 1. Strategy.py includes the statistical language module based strategy, a random generated signal for crosscheck and also a dual moving average crossover strategy as a reference.
