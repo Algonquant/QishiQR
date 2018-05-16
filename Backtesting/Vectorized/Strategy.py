@@ -14,6 +14,17 @@ class Strategy:
         # self.data['signal'] = 0  # initiate all signal position to 0
         return self.data
 
+class RandomForecastingStrategy(Strategy):
+    # random generated signal for bactekster validation
+    def __init__(self, data, m = 0):
+        Strategy.__init__(self, data)
+        self._m = m #module order
+    def generatingsignal(self):
+        signal_len = self.data.shape[0]
+        self.data['signal'] = np.random.random_integers(0,2,signal_len)
+        self.data['signal'][0:5] = 0
+        self.data['max_pct'] = 0
+        return self.data
 
 class MovingAverageStrategy(Strategy):
     """
